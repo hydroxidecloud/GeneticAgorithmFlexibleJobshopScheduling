@@ -25,14 +25,14 @@
 
 ### 计算标准测试算例的最大完工时间
 
-运行 `GA_jobshop_makespan.py` 脚本以优化标准测试算例的最大完工时间。
+存储ta01, ta40, ta60于~/instance/中，运行 `GA_jobshop_makespan.py` 脚本以优化标准测试算例的最大完工时间。
 ```bash
 python GA_jobshop_makespan.py
 ```
 
 ### 计算测试算例的最大完工时间
 
-运行 `GA_jobshop_realcease.py` 脚本以优化标准测试算例的最大完工时间。
+存储parts.csv于~/instance/中，运行 `GA_jobshop_realcease.py` 脚本以优化标准测试算例的最大完工时间。
 ```bash
 python GA_jobshop_realcase.py
 ```
