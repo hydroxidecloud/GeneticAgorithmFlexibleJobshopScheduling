@@ -44,7 +44,7 @@ if (population_size <= 0 or
         not (0 <= crossover_rate <= 1 and
              0 <= mutation_rate <= 1 and
              0 <= mutation_selection_rate <= 1)):
-    print('超参数不符合要求，程序终止')
+    print('Invalid parameter, Program exits')
     exit()
 
 start_time = time.time()
@@ -192,14 +192,14 @@ for n in tqdm(range(num_iteration), desc="Iterations"):
     selected_population = []
     selected_crom_fit = []
     for _ in range(population_size):
-        # 随机选择 tournament_size 个体
+        # randomly select individuals for tournament_size
         tournament_indices = np.random.choice(len(total_chromosome), tournament_size, replace=False)  # 一个个体可以被多次选择
-        # 从中选择适应度最高的个体
+        # choose the best individual
         best_index = tournament_indices[0]
         for index in tournament_indices[1:]:
             if chrom_fit[index] < chrom_fit[best_index]:
                 best_index = index
-        # 将选择的个体添加到新的种群中并更新chrom_fit列表
+        # add chosen individual to the population and update list chrom_fit
         selected_population.append(copy.deepcopy(total_chromosome[best_index]))
         selected_crom_fit.append(chrom_fit[best_index])
         population_list = selected_population
@@ -298,15 +298,15 @@ def write_solution_to_file(solution, filename):
 
 
 def create_solution_matrix(sequence_best, num_pt, num_mc, ms):
-    # 初始化Solution矩阵，大小为num_mc * num_pt，初始值为-1表示未分配
+    # initialize solution matrix，size num_mc * num_pt，default value -1 means unallocated
     solution = np.full((num_mc, num_pt), -1)
 
-    # 用于记录每个工件的工序次数
+    # record job operation count
     job_operation_count = {i: 0 for i in range(num_pt)}
 
     for operation in sequence_best:
-        job = operation  # 工件编号
-        op_num = job_operation_count[job]  # 当前工件的工序编号
+        job = operation  # job no.
+        op_num = job_operation_count[job]  # current job operation no.
         machine = ms[job][op_num] - 1  # 获取工件的工序对应的机器编号并转换为索引
         job_operation_count[job] += 1  # 增加工件的工序次数
 
