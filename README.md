@@ -1,34 +1,35 @@
-# 作业车间调度问题优化项目
+# Job Shop Scheduling Problem Optimization Project
 
-这是一个基于遗传算法的作业车间调度问题（Job Shop Scheduling Problem, Jm||Cmax）的开源项目。本项目旨在优化调度算法，以最小化最大完工时间（Makespan），适用于标准测试算例和实际案例。
+This repository contains an open-source project focused on optimizing the Job Shop Scheduling Problem (Jm||Cmax) using Genetic Algorithm. The primary objective is to minimize the Makespan, applicable to both standard test cases and real-world scenarios.
 
-## 项目简介
+## Project Overview
 
-作业车间调度问题（Job Shop Scheduling Problem, Jm||Cmax）是调度领域的一个重要研究课题。本项目设计并实现了一种基于遗传算法的调度算法，旨在优化最大完工时间（Makespan）。项目包含标准测试算例（如ta01, ta40, ta60）和实际案例的调度优化。
+The Job Shop Scheduling Problem (Jm||Cmax) is a significant research area in scheduling. This project implements a Genetic Algorithm-based scheduling algorithm to optimize the Makespan. It includes optimizations for standard test cases (e.g., ta01, ta40, ta60) and real-world scenarios.
 
-### 系统描述
+### System Description
 
-1. 系统包含𝑚台机器，需要完成𝑛个工作。
-2. 每个作业需依次完成𝑚道工序，每道工序需在一台机器上加工，加工时间为常数。
-3. 每台机器最多同时加工一个作业。
-4. 假设机器的准备时间（如装夹和拆卸等）已包括在加工时间中，无需另外考虑。
-5. 假设机器间的运输时间可以忽略不计。
+1. The system involves 𝑚 machines and 𝑛 jobs to be completed.
+2. Each job consists of 𝑚 operations processed sequentially on different machines, each with a fixed processing time.
+3. Each machine can handle only one job at a time.
+4. Setup times (e.g., mounting and dismounting) are included in the processing times.
+5. Transport times between machines are negligible.
 
-## 项目结构
+## Project Structure
 
-- `GA_jobshop_makespan.py`: 用于计算标准测试算例（如ta01, ta40, ta60）的最大完工时间。
-- `GA_jobshop_realcase.py`: 用于计算实际案例的最大完工时间。
-- `sequence_makespan_calculator.py`: 用于计算某一种标准测试算例染色体序列的总工时。
-- `sequence_realcase_calculator.py`: 用于计算某一种实际案例染色体序列的总工时。
+- `GA_jobshop_makespan.py`: Calculates the Makespan for standard test cases (e.g., ta01, ta40, ta60).
+- `GA_jobshop_realcase.py`: Calculates the Makespan for real-world scenarios.
+- `sequence_makespan_calculator.py`: Computes the total processing time for a chromosome sequence of a standard test case.
+- `sequence_realcase_calculator.py`: Computes the total processing time for a chromosome sequence of a real-world scenario.
 
-## 使用说明
+## Usage Instructions
 
-### 计算标准测试算例的最大完工时间
+### Calculate Makespan for Standard Test Cases
 
-存储ta01, ta40, ta60于~/instance/中，运行 `GA_jobshop_makespan.py` 脚本以优化标准测试算例的最大完工时间。
+Place ta01, ta40, ta60 in the ~/instance/ directory. Run the following command to optimize the Makespan for standard test cases:
+
 ```bash
 python GA_jobshop_makespan.py
-```
+
 
 ### 计算测试算例的最大完工时间
 
