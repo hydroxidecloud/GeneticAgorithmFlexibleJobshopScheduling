@@ -36,6 +36,8 @@ or
 ruby --jit GA_jobshop_makespan.rb
 ```
 
+### Calculate Makespan for Real-world Scenarios
+
 Place parts.csv in the ./instance/ directory. Run the following command to optimize the Makespan for real-world scenarios:
 
 ```bash
@@ -46,3 +48,16 @@ or
 ```bash
 python GA_jobshop_realcase_refactored.py
 ```
+
+### Calculate Makespan for Existed Standard Test Case Genetic Sequence
+
+```bash
+python sequence_makespan_calculator.py
+```
+
+### Calculate Makespan for Existed Real-world Scenarios Genetic Sequence
+
+```bash
+python sequence_realcase_calculator.py
+```
+
