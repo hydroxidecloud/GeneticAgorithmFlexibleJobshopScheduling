@@ -23,7 +23,7 @@ The Job Shop Scheduling Problem (Jm||Cmax) is a significant research area in sch
 
 ## Usage Instructions
 
-### Generate Gantt and Calculate Makespan for Standard Test Cases
+### Generate Schedule and Calculate Makespan for Standard Test Cases
 
 Place ta01, ta40, ta60 in the ./instance/ directory. Run the following command to optimize the Makespan for standard test cases:
 
@@ -36,7 +36,7 @@ or
 ruby --jit GA_jobshop_makespan.rb
 ```
 
-### Generate Gantt and Calculate Makespan for Real-world Scenarios
+### Generate Schedule and Calculate Makespan for Real-world Scenarios
 
 Place parts.csv in the ./instance/ directory. Run the following command to optimize the Makespan for real-world scenarios:
 
