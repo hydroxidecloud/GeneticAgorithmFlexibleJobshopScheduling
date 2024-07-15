@@ -29,3 +29,10 @@ Place ta01, ta40, ta60 in the ~/instance/ directory. Run the following command t
 
 ```bash
 python GA_jobshop_makespan.py
+```
+
+or
+
+```bash
+ruby --jit GA_jobshop_makespan.rb
+```
