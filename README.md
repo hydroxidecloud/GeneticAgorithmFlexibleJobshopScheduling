@@ -25,14 +25,24 @@ The Job Shop Scheduling Problem (Jm||Cmax) is a significant research area in sch
 
 ### Calculate Makespan for Standard Test Cases
 
-Place ta01, ta40, ta60 in the ~/instance/ directory. Run the following command to optimize the Makespan for standard test cases:
+Place ta01, ta40, ta60 in the ./instance/ directory. Run the following command to optimize the Makespan for standard test cases:
 
 ```bash
 python GA_jobshop_makespan.py
 ```
-
 or
 
 ```bash
 ruby --jit GA_jobshop_makespan.rb
+```
+
+Place parts.csv in the ./instance/ directory. Run the following command to optimize the Makespan for real-world scenarios:
+
+```bash
+python GA_jobshop_realcase.py
+```
+or
+
+```bash
+python GA_jobshop_realcase_refactored.py
 ```
