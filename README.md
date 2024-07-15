@@ -16,8 +16,8 @@ The Job Shop Scheduling Problem (Jm||Cmax) is a significant research area in sch
 
 ## Project Structure
 
-- `GA_jobshop_makespan.py`: Calculates the Makespan for standard test cases (e.g., ta01, ta40, ta60).
-- `GA_jobshop_realcase.py`: Calculates the Makespan for real-world scenarios.
+- `GA_jobshop_makespan.py`, `GA_jobshop_makespan.rb`: Calculates the Makespan for standard test cases (e.g., ta01, ta40, ta60).
+- `GA_jobshop_realcase.py`, `GA_jobshop_realcase_refactored.py`: Calculates the Makespan for real-world scenarios.
 - `sequence_makespan_calculator.py`: Computes the total processing time for a chromosome sequence of a standard test case.
 - `sequence_realcase_calculator.py`: Computes the total processing time for a chromosome sequence of a real-world scenario.
 
