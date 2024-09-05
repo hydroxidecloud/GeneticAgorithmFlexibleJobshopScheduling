@@ -61,3 +61,8 @@ python sequence_makespan_calculator.py
 python sequence_realcase_calculator.py
 ```
 
+![image](https://github.com/hydroxidecloud/GeneticAgorithmFlexibleJobshopScheduling/blob/main/realcaseGantt.png)
+
+![image](https://github.com/hydroxidecloud/GeneticAgorithmFlexibleJobshopScheduling/blob/main/realcaseMG.png)
+
+
